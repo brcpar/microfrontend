@@ -10,6 +10,7 @@ const vueLifecycles = singleSpaVue({
   appOptions: {
     render: (h: any) => h(App),
     router,
+    el: '#nav-here'
   },
 });
 

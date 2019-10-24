@@ -1,8 +1,9 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <LeadList/>
-  </div>
+<v-app>
+  <v-content>
+    <lead-list/>
+  </v-content>
+</v-app>
 </template>
 
 <script lang="ts">

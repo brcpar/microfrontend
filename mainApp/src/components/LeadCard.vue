@@ -1,7 +1,21 @@
 <template>
-  <div class="leadCard">
-      {{lead.firstName}} {{lead.lastName}}
-  </div>
+<v-row
+      no-gutters
+    >
+      <v-col
+        v-for="n in 3"
+        :key="n"
+        :cols="n === 2 ? 6 : undefined"
+      >
+        <v-card
+          class="pa-2"
+          outlined
+          tile
+        >
+          {{lead.firstName}} {{lead.lastName}}
+        </v-card>
+      </v-col>
+    </v-row>
 </template>
 
 <script lang="ts">

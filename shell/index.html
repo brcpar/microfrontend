@@ -24,8 +24,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/4.0.0/extras/amd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/4.0.0/extras/named-exports.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/4.0.0/extras/named-register.min.js"></script>
+    <!-- <script src="./navitems.js"></script> -->
+    <link rel="stylesheet" href="./shellstyles.css">
   </head>
   <body>
+    <div id="multi-spa-container">
+      <div id="nav-here"></div>
+      <div id="main-content"></div>
+    </div>
     <script>
       System.import('single-spa').then(function (singleSpa) {
         singleSpa.registerApplication(

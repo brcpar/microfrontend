@@ -1,12 +1,12 @@
 <template>
-  <div class="leadList">
+  <v-container class="leadList">
     <lead-card
       v-for="(item, index) in leads"
       v-bind:lead="item"
       v-bind:index="index"
       v-bind:key="item.id"
     ></lead-card>
-  </div>
+  </v-container>
 </template>
 <script lang="ts">
 // @ is an alias to /src
