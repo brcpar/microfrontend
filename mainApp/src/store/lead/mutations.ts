@@ -1,8 +1,8 @@
 import { MutationTree } from 'vuex';
-import { LeadState } from './types';
+import { LeadState, Lead } from './types';
 
 export const mutations: MutationTree<LeadState> = {
-    setMdid(state, id: string) {
-        state.id = id;
+    setLeads(state, leads: Lead[]) {
+        state.leads = leads;
     },
 };

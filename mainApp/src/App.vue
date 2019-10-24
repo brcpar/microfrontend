@@ -1,17 +1,17 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="This is the main application yo"/>
+    <LeadList/>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import HelloWorld from './components/HelloWorld.vue';
+import LeadList from './views/LeadList.vue';
 
 @Component({
   components: {
-    HelloWorld,
+    LeadList,
   },
 })
 export default class App extends Vue {}

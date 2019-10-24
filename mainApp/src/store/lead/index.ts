@@ -6,9 +6,7 @@ import {actions} from './actions';
 import {mutations} from './mutations';
 
 export const state: LeadState = {
-    id: '',
-    firstName: '',
-    lastName: '',
+    leads: [],
 };
 
 const namespaced: boolean = true;
