@@ -1,9 +1,17 @@
 #navbar-app {
     flex: 0 0 220px;
     width: 220px;
+    display: flex;
+    flex-flow: column;
 }
 
 #multi-spa-container {
     flex-flow: row nowrap;
     width: 100%;
+    display: flex;
+}
+
+#main-content {
+    width: 100%;
+    position: relative;
 }
