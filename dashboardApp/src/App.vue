@@ -1,27 +1,21 @@
 <template>
-<div id="mainapp">
-<v-app>
-  <v-content>
-    <lead-list/>
-  </v-content>
-</v-app>
-</div>
+  <div id="dashboardapp">
+    <div>DASH LOADED</div>
+  </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import LeadList from './views/LeadList.vue';
 
 @Component({
   components: {
-    LeadList,
   },
 })
 export default class App extends Vue {}
 </script>
 
 <style>
-#app {
+#dashboardapp {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

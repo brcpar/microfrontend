@@ -1,0 +1,40 @@
+{
+  "name": "dashboardapp",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve --port 8084",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "build:single-spa": "npm run build ./src/main.single-spa.ts",
+    "serve:single-spa": "npm run serve ./src/main.single-spa.ts",
+    "start": "npm run serve:single-spa",
+    "test:e2e": "vue-cli-service test:e2e",
+    "test:unit": "vue-cli-service test:unit"
+  },
+  "dependencies": {
+    "core-js": "^3.3.2",
+    "single-spa-vue": "^1.5.2",
+    "vue": "^2.6.10",
+    "vue-class-component": "^7.0.2",
+    "vue-property-decorator": "^8.3.0",
+    "vue-router": "^3.1.3"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^4.0.0",
+    "@vue/cli-plugin-typescript": "^4.0.0",
+    "@vue/cli-service": "^4.0.0",
+    "typescript": "~3.5.3",
+    "vue-cli-plugin-single-spa": "^1.0.1",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
+}

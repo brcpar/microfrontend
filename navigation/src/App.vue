@@ -2,6 +2,8 @@
   <div id="navbar-app">
     <div id="nav">
       <router-link to="/main">Main application</router-link>
+      <br>
+      <router-link to="/dashboard">Dashboard</router-link>
     </div>
     <router-view/>
   </div>

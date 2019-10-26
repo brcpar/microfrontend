@@ -10,8 +10,9 @@
     <script type="systemjs-importmap">
       {
         "imports": {
-          "navbar": "http://localhost:8082/js/app.js",
-          "mainApp": "http://localhost:8081/js/app.js",
+          "navbar": "http://localhost:8082/js/app.js",            
+          "mainApp": "http://localhost:8083/js/app.js",  
+          "dashboardApp": "http://localhost:8084/js/app.js",  
           "single-spa": "https://cdnjs.cloudflare.com/ajax/libs/single-spa/4.3.5/system/single-spa.min.js"
         }
       }
@@ -24,13 +25,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/4.0.0/extras/amd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/4.0.0/extras/named-exports.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/4.0.0/extras/named-register.min.js"></script>
-    <!-- <script src="./navitems.js"></script> -->
     <link rel="stylesheet" href="./shellstyles.css">
   </head>
   <body>
     <div id="multi-spa-container">
       <div id="nav-here"></div>
-      <div id="main-content"></div>
+      <div id="mainapp"></div>
+      <div id="dashboardapp"></div>      
     </div>
     <script>
       System.import('single-spa').then(function (singleSpa) {
@@ -39,11 +40,17 @@
           () => System.import('navbar'),
           location => true,
         );
-
+                
         singleSpa.registerApplication(
           'mainApp',
           () => System.import('mainApp'),
           location => location.pathname.startsWith('/main'),
+        );
+
+        singleSpa.registerApplication(
+          'dashboardApp',
+          () => System.import('dashboardApp'),
+          location => location.pathname.startsWith('/dashboard'),
         );
 
         singleSpa.start();
