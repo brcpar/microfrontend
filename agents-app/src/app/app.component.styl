@@ -1,0 +1,346 @@
+color-primary__dark = #018aab
+color-primary = #34A2BC
+color-danger = #e74c3c
+white-overlay = rgba(white, 0.9)
+br-small = 2px
+neutral-3 = #bdc3c7
+neutral-7 = #1F2930
+white = #ffffff
+
+.mr10
+    margin-right: 10px !important
+a
+  color: color-primary__dark
+  text-decoration: none
+
+a:hover, a:focus, a:active
+  color: color-primary
+  outline: 0
+  text-decoration: none
+  cursor: pointer
+
+/* button reset */
+.btn
+  font-size: 1em
+  /*text-transform: uppercase;*/
+  padding: .42em 1em
+  line-height: 1.2
+
+.btn:hover, .btn:active, .btn:focus
+  outline: none !important
+
+.btn:active, .btn.active
+  -webkit-box-shadow: inset 0px 0px 4px 0px rgba(0, 0, 0, 0.1)
+  box-shadow: inset 0px 0px 4px 0px rgba(0, 0, 0, 0.1)
+
+.btn > .caret
+  margin-top: -1px
+
+.btn-lg, .btn-group-lg > .btn
+  font-size: 18px
+  font-size: 1.333rem
+  padding: .5em 1.333em
+
+.btn-sm, .btn-group-sm > .btn
+  font-size: 13px
+  font-size: .75rem
+  padding: .42em 1em
+
+.btn-xs, .btn-group-xs > .btn
+  font-size: 11px
+  font-size: .65rem
+  padding: .21em .3em
+  text-transform: uppercase
+
+.btn.btn-link
+  color: color-primary
+
+.btn.btn-link:hover, .btn.btn-link:active, .btn.btn-link:focus
+  color: darken(color-primary, 2%)
+  outline: 0
+  text-decoration: none
+  -webkit-box-shadow: none
+  box-shadow: none
+
+/* button group reset */
+.btn-group.open .dropdown-toggle
+  outline: none
+  -webkit-box-shadow: inset 0px 0px 4px 0px rgba(0, 0, 0, 0.1)
+  box-shadow: inset 0px 0px 4px 0px rgba(0, 0, 0, 0.1)
+
+/* button tag */
+.btn-tag .btn
+  margin-bottom: 3px
+
+/* button rounded */
+.btn-rounded
+  border-radius: br-small
+
+.btn-rounded.btn-ls
+  border-radius: br-small
+
+.btn-rounded.btn-sm
+  border-radius: br-small
+
+.btn-rounded.btn-xs
+  border-radius: br-small
+
+/* button caret color */
+.btn-inverse .caret, .btn-teal .caret
+  border-top-color: white
+
+.btn-default
+  color: color-primary__dark
+  background-color: white
+  border-color: rgba(neutral-3, .3)
+  border-radius: br-small
+  box-shadow: 0 0 1px rgba(neutral-7,0.08), 0 1px 1px rgba(neutral-7,0.16)
+  transition: all .08s ease-in
+  font-weight: bold
+  &:hover, &:focus, &.focus
+    color: color-primary__dark
+    background-color: darken(white, 2%)
+    border-color: darken(white, 7%)
+    box-shadow: 0 0 6px rgba(neutral-7,0.06), 0 6px 6px rgba(neutral-7,0.12)
+  &:active, &.active, .open > .dropdown-toggle
+    background-image: none
+    box-shadow: 0 0 4px rgba(neutral-7,0.12), 0 3px 3px rgba(neutral-7,0.16)
+  &.disabled, &[disabled], &.disabled:hover, &[disabled]:hover, &.disabled:focus,	&[disabled]:focus, &.disabled.focus, &[disabled].focus, &.disabled:active, &[disabled]:active, &.disabled.active, &[disabled].active
+    background-color: transparentize(white, .4)
+    border-color: transparent
+  & .badge
+    color: color-primary__dark
+    background-color: darken(white, 5%)
+  &.btn-outline
+    color: white
+    background-color: transparent
+    &:active, &.active, .open > .dropdown-toggle, &[aria-expanded="true"]
+      color: color-primary__dark
+      background-color: white
+.btn-primary
+  color: white-overlay
+  background-color: color-primary
+  border-color: darken(color-primary, 5%)
+  border-radius: br-small
+  box-shadow: 0 0 1px rgba(neutral-7,0.08), 0 1px 1px rgba(neutral-7,0.16)
+  transition: all .08s ease-in
+  &:hover, &:focus, &.focus
+    color: white-overlay
+    background-color: darken(color-primary, 2%)
+    border-color: darken(color-primary, 7%)
+    box-shadow: 0 0 6px rgba(neutral-7,0.06), 0 6px 6px rgba(neutral-7,0.12)
+  &:active, &.active, .open > .dropdown-toggle
+    background-image: none
+    box-shadow: 0 0 4px rgba(neutral-7,0.12), 0 3px 3px rgba(neutral-7,0.16)
+  &.disabled, &[disabled], &.disabled:hover, &[disabled]:hover, &.disabled:focus, &[disabled]:focus, &.disabled.focus, &[disabled].focus, &.disabled:active, &[disabled]:active, &.disabled.active, &[disabled].active
+    background-color: transparentize(color-primary, .4)
+    border-color: transparent
+  & .badge
+    color: white-overlay
+    background-color: darken(color-primary, 5%)
+  &.btn-outline
+    color: color-primary
+    background-color: transparent
+    &:active, &.active, .open > .dropdown-toggle, &[aria-expanded="true"]
+      color: white-overlay
+      background-color: color-primary
+
+.btn-danger
+  color: white-overlay
+  background-color: color-danger
+  border-color: darken(color-danger, 5%)
+  border-radius: br-small
+  box-shadow: 0 0 1px rgba(neutral-7,0.08), 0 1px 1px rgba(neutral-7,0.16)
+  transition: all .08s ease-in
+  &:hover, &:focus, &.focus
+    color: white-overlay
+    background-color: darken(color-danger, 2%)
+    border-color: darken(color-danger, 7%)
+    box-shadow: 0 0 6px rgba(neutral-7,0.06), 0 6px 6px rgba(neutral-7,0.12)
+  &:active, &.active, .open > .dropdown-toggle
+    background-image: none
+    box-shadow: 0 0 4px rgba(neutral-7,0.12), 0 3px 3px rgba(neutral-7,0.16)
+  &.disabled, &[disabled], &.disabled:hover, &[disabled]:hover, &.disabled:focus, &[disabled]:focus, &.disabled.focus, &[disabled].focus, &.disabled:active, &[disabled]:active, &.disabled.active, &[disabled].active
+    background-color: transparentize(color-danger, .4)
+    border-color: transparent
+  & .badge
+    color: white-overlay
+    background-color: darken(color-danger, 5%)
+  &.btn-outline
+    color: color-danger
+    background-color: transparent
+    &:active, &.active, .open > .dropdown-toggle, &[aria-expanded="true"]
+      color: white-overlay
+      background-color: color-danger
+
+.panel-heading {
+  padding: .75em 1em;
+  padding: .75rem 1rem;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  /* experiment */
+  margin-left: -1px;
+  margin-right: -1px;
+  margin-top: -1px;
+  border: 1px solid transparent;
+  font-size: 1.25em;
+  font-weight: bold;
+}
+.panel-heading--fit {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+}
+.panel-heading > .panel-title,
+.panel-heading > .panel-toolbar {
+  display: table-cell;
+  vertical-align: middle;
+  width: 1%;
+  height: auto;
+  float: none !important;
+}
+.panel-heading > .panel-title.ellipsis,
+.panel-heading > .panel-toolbar.ellipsis {
+  max-width: 10px;
+}
+.panel-heading > .panel-title {
+  font-size: 1em;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.panel-heading > .panel-title > .icon {
+  margin-right: 5px;
+}
+.panel-heading > .panel-title > a,
+.panel-heading > .panel-title > a:hover,
+.panel-heading > .panel-title > a:active,
+.panel-heading > .panel-title > a:focus {
+  text-decoration: none;
+  outline: 0;
+}
+.panel-heading > .panel .panel-heading + .panel-body {
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+.panel-heading--noborder {
+  border-bottom: none !important; // this is a hack to get around the .panel-primary .panel-heading and global-panel-header mixin thing
+}
+.panel-heading > .panel-title .title-arrow {
+  i {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: inherit;
+  }
+}
+
+
+.agent-pic {
+    width: 90px;
+    height: 90px;
+    border-radius: 50% !important;
+}
+
+
+.agents-table {
+    /*.permissions {
+       min-width: 160px;
+    }
+
+    .permissions ul {
+        display: grid;
+        padding-left: 0;
+    }
+
+    .permissions .permission {
+        float: left;
+        overflow: auto;
+    }
+
+    .permissions .permission input[type="checkbox"] {
+        float: left;
+        margin-top: 2px;
+    }*/
+    .agent-action-btn {
+        width: 120px;
+    }
+
+    .agent-table-body-wrapper {
+        height: calc(100vh - 220px);
+    }
+
+    .agent-table-body {
+        margin-top: 10px;
+        width: 100%;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .agent-table-row {
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-direction: row;
+            -ms-flex-direction: row;
+            flex-direction: row;
+            border-bottom: 1px solid #BDC3C7;
+            -webkit-box-flex: 1 0 48%;
+            -moz-box-flex: 1 0 48%;
+            -webkit-flex: 1 0 48%;
+            -ms-flex: 1 0 48%;
+            flex: 1 0 48%;
+            border: 1px solid #BDC3C7;
+            background: white;
+            margin: 5px;
+            position: relative;
+            border-radius: 10px;
+
+            .cell-truncate {
+                text-overflow: ellipsis;
+                overflow: hidden;
+                width: 180px;
+            }
+
+            .agent-table-col-sm {
+                -webkit-box-flex: 0 0 100px;
+                -moz-box-flex: 0 0 100px;
+                -webkit-flex: 0 0 100px;
+                -ms-flex: 0 0 100px;
+                flex: 0 0 100px;
+                padding-right: 10px;
+                margin: 10px;
+                color: #363E45;
+            }
+
+            .agent-table-col {
+                -webkit-box-flex: 1 1 25%;
+                -moz-box-flex: 1 1 25%;
+                -webkit-flex: 1 1 25%;
+                -ms-flex: 1 1 25%;
+                flex: 1 1 25%;
+                padding-right: 10px;
+                margin: 10px;
+                color: #363E45;
+            }
+        }
+
+
+        .agent-table-row:last-of-type {
+            -webkit-box-flex: 0 0 49%;
+            -moz-box-flex: 0 0 49%;
+            -webkit-flex: 0 0 49%;
+            -ms-flex: 0 0 49%;
+            flex: 0 0 49%;
+        }
+    }
+}
+
+.text-right
+    text-align: right

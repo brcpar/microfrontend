@@ -2,22 +2,25 @@
   <div id="navbar-app" style="min-height:100vh">
     <div id="nav">
       <div>
-          <router-link to="/main">Main application</router-link>
+        <router-link to="/main">Main application</router-link>
       </div>
       <div class="nav-item">
         <router-link to="/about">About</router-link>
       </div>
-            <div class="nav-item">
+      <div class="nav-item">
         <router-link to="/dashboard">Dashboard</router-link>
       </div>
+      <div class="nav-item">
+        <router-link to="/agents">Agents</router-link>
+      </div>
     </div>
-    <router-view/>
+    <router-view />
   </div>
 </template>
 
 <style>
 #navbar-app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -35,6 +38,6 @@
   color: #34a2bc;
 }
 .nav-item {
-  padding-top:20px;
+  padding-top: 20px;
 }
 </style>
