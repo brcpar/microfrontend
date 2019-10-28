@@ -1,21 +1,23 @@
 <template>
-  <v-row no-gutters @mouseover="hover = true" @mouseleave="hover = false">
-      <v-col>
-        <v-card class="pa-2" outlined tile  :class="{ active: hover }">
+<v-hover v-slot:default="{ hover }">
+  <v-row no-gutters :class="{active: hover}">
+      <v-col >
+        <v-card class="pa-2 card-cell" outlined tile>
           {{lead.firstName}} {{lead.lastName}}
         </v-card>
       </v-col>
       <v-col>
-        <v-card class="pa-2" outlined tile  :class="{ active: hover }">
+        <v-card class="pa-2 card-cell" outlined tile>
           {{lead.leadType}} Lead
         </v-card>
       </v-col>
       <v-col>
-        <v-card class="pa-2" outlined tile  :class="{ active: hover }">
+        <v-card class="pa-2 card-cell" outlined tile>
           {{lead.registeredDate}}
         </v-card>
       </v-col>
   </v-row>
+</v-hover>
 </template>
 
 <script lang="ts">
@@ -49,7 +51,7 @@ li {
 a {
   color: #42b983;
 }
-.active {
+.active .card-cell {
   background: #34a2bc !important;
 }
 </style>
