@@ -3,6 +3,7 @@
     width: 220px;
     display: flex;
     flex-flow: column;
+    background-color: #363e45;
 }
 
 #multi-spa-container {
@@ -11,7 +12,6 @@
     display: flex;
 }
 
-#main-content {
-    width: 100%;
-    position: relative;
+#mainapp {
+    flex-grow: 1;
 }

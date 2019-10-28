@@ -1,5 +1,5 @@
 <template>
-  <div id="dashboardapp">
+  <div id="mainapp">
     <div>DASH LOADED</div>
   </div>
 </template>

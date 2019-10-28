@@ -3,7 +3,7 @@ import VueRouter from 'vue-router';
 
 Vue.use(VueRouter);
 
-const routes:any[] = [
+const routes: any[] = [
   // {
   //   path: '/',
   //   name: 'home',

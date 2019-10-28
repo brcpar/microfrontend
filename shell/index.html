@@ -13,6 +13,7 @@
           "navbar": "http://localhost:8082/js/app.js",            
           "mainApp": "http://localhost:8083/js/app.js",  
           "dashboardApp": "http://localhost:8084/js/app.js",  
+          "aboutApp": "http://localhost:8085/js/app.js",  
           "single-spa": "https://cdnjs.cloudflare.com/ajax/libs/single-spa/4.3.5/system/single-spa.min.js"
         }
       }
@@ -31,7 +32,7 @@
     <div id="multi-spa-container">
       <div id="nav-here"></div>
       <div id="mainapp"></div>
-      <div id="dashboardapp"></div>      
+      <!-- <div id="dashboardapp"></div>       -->
     </div>
     <script>
       System.import('single-spa').then(function (singleSpa) {
@@ -51,6 +52,12 @@
           'dashboardApp',
           () => System.import('dashboardApp'),
           location => location.pathname.startsWith('/dashboard'),
+        );
+
+        singleSpa.registerApplication(
+          'aboutApp',
+          () => System.import('aboutApp'),
+          location => location.pathname.startsWith('/about'),
         );
 
         singleSpa.start();

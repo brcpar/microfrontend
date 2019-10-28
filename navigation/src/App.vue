@@ -1,9 +1,21 @@
 <template>
-  <div id="navbar-app">
+  <div id="navbar-app" style="min-height:100vh">
     <div id="nav">
-      <router-link to="/main">Main application</router-link>
-      <br>
-      <router-link to="/dashboard">Dashboard</router-link>
+      <div>
+          <router-link to="/main">Main application</router-link>
+      </div>
+      <div class="nav-item">
+        <router-link to="/about">About</router-link>
+      </div>
+            <div class="nav-item">
+        <router-link to="/dashboard">Dashboard</router-link>
+      </div>
+            <div class="nav-item">
+        <router-link to="/dashboard">Dashboard</router-link>
+      </div>
+            <div class="nav-item">
+        <router-link to="/dashboard">Dashboard</router-link>
+      </div>
     </div>
     <router-view/>
   </div>
@@ -22,9 +34,12 @@
 }
 #nav a {
   font-weight: bold;
-  color: #2c3e50;
+  color: white;
 }
 #nav a.router-link-exact-active {
-  color: #42b983;
+  color: #34a2bc;
+}
+.nav-item {
+  padding-top:20px;
 }
 </style>

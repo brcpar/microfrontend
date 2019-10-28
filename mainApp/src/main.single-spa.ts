@@ -14,7 +14,7 @@ const vueLifecycles = singleSpaVue({
     router,
     store,
     vuetify,
-    el: '#mainapp'
+    el: '#mainapp',
   },
 });
 
