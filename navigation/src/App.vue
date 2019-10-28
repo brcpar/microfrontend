@@ -10,12 +10,6 @@
             <div class="nav-item">
         <router-link to="/dashboard">Dashboard</router-link>
       </div>
-            <div class="nav-item">
-        <router-link to="/dashboard">Dashboard</router-link>
-      </div>
-            <div class="nav-item">
-        <router-link to="/dashboard">Dashboard</router-link>
-      </div>
     </div>
     <router-view/>
   </div>
@@ -31,7 +25,7 @@
 }
 #nav {
   padding: 30px;
-  text-align: -webkit-left;
+    text-align: -webkit-left;
 }
 #nav a {
   font-weight: bold;
