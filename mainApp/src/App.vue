@@ -16,6 +16,11 @@ import LeadList from './views/LeadList.vue';
   components: {
     LeadList,
   },
+  methods: {
+    mouseOverMethod(){
+      
+    }
+  }
 })
 export default class App extends Vue {}
 </script>

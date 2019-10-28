@@ -31,6 +31,7 @@
 }
 #nav {
   padding: 30px;
+  text-align: -webkit-left;
 }
 #nav a {
   font-weight: bold;

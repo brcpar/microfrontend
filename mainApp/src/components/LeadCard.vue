@@ -1,21 +1,21 @@
 <template>
-<v-row
-      no-gutters
-    >
-      <v-col
-        v-for="n in 3"
-        :key="n"
-        :cols="n === 2 ? 6 : undefined"
-      >
-        <v-card
-          class="pa-2"
-          outlined
-          tile
-        >
+  <v-row no-gutters @mouseover="hover = true" @mouseleave="hover = false">
+      <v-col>
+        <v-card class="pa-2" outlined tile  :class="{ active: hover }">
           {{lead.firstName}} {{lead.lastName}}
         </v-card>
       </v-col>
-    </v-row>
+      <v-col>
+        <v-card class="pa-2" outlined tile  :class="{ active: hover }">
+          {{lead.leadType}} Lead
+        </v-card>
+      </v-col>
+      <v-col>
+        <v-card class="pa-2" outlined tile  :class="{ active: hover }">
+          {{lead.registeredDate}}
+        </v-card>
+      </v-col>
+  </v-row>
 </template>
 
 <script lang="ts">
@@ -25,6 +25,11 @@ import { Lead } from '../store/lead/types';
 @Component
 export default class LeadCard extends Vue {
   @Prop() private lead!: Lead;
+  data() {
+    return {
+      hover:false
+    }
+  }
 }
 </script>
 
@@ -43,5 +48,8 @@ li {
 }
 a {
   color: #42b983;
+}
+.active {
+  background: #34a2bc !important;
 }
 </style>
