@@ -1,6 +1,6 @@
 <template>
 <div id="mainapp">
-<v-app>
+<v-app class="leadListApp">
   <v-content>
     <lead-list/>
   </v-content>
@@ -26,7 +26,7 @@ export default class App extends Vue {}
 </script>
 
 <style>
-#app {
+.leadListApp {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
