@@ -1,6 +1,6 @@
 <template>
-  <div id="navbar-app" style="min-height:100vh">
-    <div id="nav">
+  <div class="navbar-app" style="min-height:100vh">
+    <div class="nav">
       <div class="nav-item">
         <router-link to="/main">Main application</router-link>
       </div>
@@ -32,28 +32,28 @@ export default class App extends Vue {}
 </script>
 
 <style>
-a {
+.navbar-app a {
   text-decoration: none;
   cursor: pointer;
 }
-#navbar-app {
+.navbar-app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  background-color: #2c3e50;
 }
-#nav {
+.navbar-app .nav {
   padding: 10px;
   text-align: -webkit-left;
 }
-.nav-item > a {
+.navbar-app .nav-item > a {
   color: white;
 }
-#nav a.router-link-exact-active {
+.navbar-app .nav a.router-link-exact-active {
   color: #34a2bc;
 }
-.nav-item {
+.navbar-app .nav-item {
   padding-top: .75em;
   padding-bottom: .75em;
   padding-right: .75em;
@@ -62,11 +62,11 @@ a {
   align-items: center;
 }
 
-.nav-menu .nav-sub-item.router-link-active:before {
+.navbar-app .nav-menu .nav-sub-item.router-link-active:before {
   color: #34A2BC;
 }
 
-.nav-menu .nav-sub-item:before {
+.navbar-app .nav-menu .nav-sub-item:before {
   content: "\f111";
   display: inline;
   font: normal normal normal 14px/1 FontAwesome;
@@ -77,13 +77,13 @@ a {
   margin-left: -5px;
 }
 
-.nav-menu {
+.navbar-app .nav-menu {
   background-color: #141718;
   margin-left: -10px;
   margin-right: -10px;
 }
 
-.nav-sub-item {
+.navbar-app .nav-sub-item {
   padding-top: 0.5em;
   padding-bottom: 0.25em;
   margin-left: 1em;
@@ -96,11 +96,11 @@ a {
   display: flex;
 }
 
-.nav-sub-item.active {
+.navbar-app .nav-sub-item.active {
   color: #34a2bc;
 }
 
-.nav-sub-item-content {
+.navbar-app .nav-sub-item-content {
   margin-left: 0.75em;
   flex: 1;
   margin-right: 0.75em;
