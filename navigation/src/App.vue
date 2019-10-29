@@ -84,7 +84,7 @@ export default class App extends Vue {}
 }
 
 .navbar-app .nav-sub-item {
-  padding-top: 0.5em;
+  padding-top: 0.25em;
   padding-bottom: 0.25em;
   margin-left: 1em;
   border-left: 1px solid #363e45;
@@ -94,6 +94,10 @@ export default class App extends Vue {}
   text-align: left;
   font-size: 14px;
   display: flex;
+}
+
+.navbar-app .nav-menu>.nav-sub-item:first-child {
+  padding-top: 0.5em;
 }
 
 .navbar-app .nav-sub-item.active {
