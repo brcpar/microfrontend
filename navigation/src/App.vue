@@ -13,7 +13,7 @@
       <div class="nav-item">
         <router-link to="/agents">Agents</router-link>
       </div>
-      <Agents v-if="this.$route.path === '/agents'" />
+      <Agents v-if="this.$route.path.startsWith('/agents')" />
     </div>
     <router-view />
   </div>
