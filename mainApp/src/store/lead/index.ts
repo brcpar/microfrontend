@@ -7,6 +7,13 @@ import {mutations} from './mutations';
 
 export const state: LeadState = {
     leads: [],
+    selectedLead: {
+        id: '',
+        firstName: '',
+        lastName: '',
+        leadType: '',
+        registeredDate: '',
+    },
 };
 
 const namespaced: boolean = true;

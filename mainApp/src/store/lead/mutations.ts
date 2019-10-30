@@ -5,4 +5,7 @@ export const mutations: MutationTree<LeadState> = {
     setLeads(state, leads: Lead[]) {
         state.leads = leads;
     },
+    setLead(state, lead: Lead) {
+        state.selectedLead = lead;
+    },
 };

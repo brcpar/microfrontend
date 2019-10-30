@@ -11,12 +11,13 @@
       Registartion Date
   </span>
   </div>
-    <div style="overflow: auto;height: calc(100vh - 100px);margin-top:10px">
+    <div class="lead-card-table">
       <lead-card
       v-for="(item, index) in leads"
       v-bind:lead="item"
       v-bind:index="index"
       v-bind:key="item.id"
+      :class="{'odd': index%2!==0}">
     ></lead-card>
     </div>
   </v-container>
@@ -31,11 +32,6 @@ import { Component, Vue } from 'vue-property-decorator';
   // methods: mapActions("dialer", ["answerCall"]),
   computed: mapState('lead', ['leads']),
   components: { LeadCard },
-  methods:{
-    mouseOverMethod(){
-
-    }
-  }
 })
 export default class LeadList extends Vue {
   public name = 'list';
@@ -45,15 +41,19 @@ export default class LeadList extends Vue {
   private created() {
     this.$store.dispatch('lead/getLeads');
   }
-  data(){
-    return{
-      hover: true,
-    }
-  }
+  // public doThing(item){
+  //   debugger;
+  //   this.$emit('do-thing', item)
+  // }
 }
 </script>
 
 <style>
+.lead-card-table {
+  overflow: auto;
+  height: calc(100vh - 100px);
+  margin-top:10px
+}
 .lead-card:hover {
   background: green;
 }

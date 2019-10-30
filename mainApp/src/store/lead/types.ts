@@ -1,5 +1,6 @@
 export interface LeadState {
     leads: Lead[];
+    selectedLead: Lead;
 }
 
 export interface Lead {
@@ -8,4 +9,6 @@ export interface Lead {
     lastName: string;
     leadType: string;
     registeredDate: string;
+    phoneNumber: string;
+    email: string;
 }

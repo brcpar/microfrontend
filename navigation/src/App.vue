@@ -10,8 +10,8 @@
       <div class="nav-item">
         <router-link to="/dashboard">Dashboard</router-link>
       </div>
-      <div class="nav-item">
-        <router-link to="/agents">Agents</router-link>
+      <div class="nav-item" v-on:click="setActive(),setActive2()">
+        <router-link v-bind:class="{'router-link-active' : $route.path.startsWith('/agents') }" to="/agents/manage">Agents</router-link>
       </div>
       <Agents v-if="this.$route.path.startsWith('/agents')" />
     </div>
@@ -20,15 +20,44 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
-import Agents from "./components/agents.vue";
+import { Component, Vue } from 'vue-property-decorator';
+import Agents from './components/agents.vue';
 
 @Component({
   components: {
-    Agents
-  }
+    Agents,
+  },
+  // data() {
+  //   return {
+  //     colorNav: true,
+  //     isActive: false,
+  //   }
+  // },
+  methods: {
+    setActive: function() {
+      debugger;
+      // if (this.$data.colorNav) {
+      //   alert('is true');
+      // }
+      // else{
+      //   alert('is false');
+      // }
+    },
+  },
 })
-export default class App extends Vue {}
+export default class App extends Vue {
+  public data() {
+    return {
+      isActive: false,
+      colorNav: false,
+    };
+  }
+  public setActive2() {
+    debugger;
+    alert('sup homie2');
+    console.log('setActive2');
+  }
+}
 </script>
 
 <style>
@@ -49,6 +78,9 @@ export default class App extends Vue {}
 }
 .navbar-app .nav-item > a {
   color: white;
+}
+.navbar-app .nav a.router-link-active {
+  color: #34a2bc;
 }
 .navbar-app .nav a.router-link-exact-active {
   color: #34a2bc;

@@ -3,6 +3,19 @@ import { LeadState, Lead } from './types';
 import { RootState } from '..';
 
 export const actions: ActionTree<LeadState, RootState> = {
+    setLead({commit}, lead:Lead){
+        commit('setLead', lead);
+    },
+    setLeadDefault({commit}){
+        commit('setLead', {        
+            id: '',
+            firstName: '',
+            lastName: '',
+            leadType: '',
+            registeredDate: '',
+            phoneNumber: '',
+            email: ''});
+    },
     getLeads({commit}) {
         const mockLeads: Lead[] = [
             {
@@ -11,6 +24,8 @@ export const actions: ActionTree<LeadState, RootState> = {
                 lastName: 'One',
                 leadType: 'Buyer',
                 registeredDate: new Date(new Date().setDate(1)).toDateString(),
+                phoneNumber: '123-456-7891',
+                email: 'my.email@gmail.com',
             },
             {
                 id: 'def',
@@ -18,6 +33,8 @@ export const actions: ActionTree<LeadState, RootState> = {
                 lastName: 'Two',
                 leadType: 'Seller',
                 registeredDate: new Date(new Date().setDate(13)).toDateString(),
+                phoneNumber: '123-456-7891',
+                email: 'my.email@gmail.com',
             },
             {
                 id: 'ghi',
@@ -25,6 +42,8 @@ export const actions: ActionTree<LeadState, RootState> = {
                 lastName: 'Three',
                 leadType: 'Buyer',
                 registeredDate: new Date(new Date().setDate(27)).toDateString(),
+                phoneNumber: '123-456-7891',
+                email: 'my.email@gmail.com',
             },
             {
                 id: 'jkl',
@@ -32,6 +51,8 @@ export const actions: ActionTree<LeadState, RootState> = {
                 lastName: 'One',
                 leadType: 'Buyer',
                 registeredDate: new Date(new Date().setDate(1)).toDateString(),
+                phoneNumber: '123-456-7891',
+                email: 'my.email@gmail.com',
             },
             {
                 id: 'mno',
@@ -39,6 +60,8 @@ export const actions: ActionTree<LeadState, RootState> = {
                 lastName: 'Two',
                 leadType: 'Seller',
                 registeredDate: new Date(new Date().setDate(13)).toDateString(),
+                phoneNumber: '123-456-7891',
+                email: 'my.email@gmail.com',
             },
             {
                 id: 'pqr',
@@ -46,6 +69,8 @@ export const actions: ActionTree<LeadState, RootState> = {
                 lastName: 'Three',
                 leadType: 'Buyer',
                 registeredDate: new Date(new Date().setDate(27)).toDateString(),
+                phoneNumber: '123-456-7891',
+                email: 'my.email@gmail.com',
             },
             {
                 id: 'stu',
@@ -53,42 +78,145 @@ export const actions: ActionTree<LeadState, RootState> = {
                 lastName: 'One',
                 leadType: 'Buyer',
                 registeredDate: new Date(new Date().setDate(1)).toDateString(),
-            },
-            {
+                phoneNumber: '123-456-7891',
+                email: 'my.email@gmail.com',
+            },            {
                 id: 'vwx',
                 firstName: 'Test',
                 lastName: 'Two',
                 leadType: 'Seller',
                 registeredDate: new Date(new Date().setDate(13)).toDateString(),
-            },
-            {
+                phoneNumber: '123-456-7891',
+                email: 'my.email@gmail.com',
+            },            {
                 id: 'yz0',
                 firstName: 'Test',
                 lastName: 'Three',
                 leadType: 'Buyer',
                 registeredDate: new Date(new Date().setDate(27)).toDateString(),
-            },
-            {
+                phoneNumber: '123-456-7891',
+                email: 'my.email@gmail.com',
+            },            {
                 id: '123',
                 firstName: 'Test',
                 lastName: 'One',
                 leadType: 'Buyer',
                 registeredDate: new Date(new Date().setDate(1)).toDateString(),
-            },
-            {
+                phoneNumber: '123-456-7891',
+                email: 'my.email@gmail.com',
+            },            {
                 id: '456',
                 firstName: 'Test',
                 lastName: 'Two',
                 leadType: 'Seller',
                 registeredDate: new Date(new Date().setDate(13)).toDateString(),
-            },
-            {
+                phoneNumber: '123-456-7891',
+                email: 'my.email@gmail.com',
+            },            {
+                id: '7891',
+                firstName: 'Test',
+                lastName: 'Three',
+                leadType: 'Buyer',
+                registeredDate: new Date(new Date().setDate(27)).toDateString(),
+                phoneNumber: '123-456-7891',
+                email: 'my.email@gmail.com',
+            },            {
+                id: '781',
+                firstName: 'Test',
+                lastName: 'Three',
+                leadType: 'Buyer',
+                registeredDate: new Date(new Date().setDate(27)).toDateString(),
+                phoneNumber: '123-456-7891',
+                email: 'my.email@gmail.com',
+            },            {
+                id: '782',
+                firstName: 'Test',
+                lastName: 'Three',
+                leadType: 'Buyer',
+                registeredDate: new Date(new Date().setDate(27)).toDateString(),
+                phoneNumber: '123-456-7891',
+                email: 'my.email@gmail.com',
+            },            {
+                id: '783',
+                firstName: 'Test',
+                lastName: 'Three',
+                leadType: 'Buyer',
+                registeredDate: new Date(new Date().setDate(27)).toDateString(),
+                phoneNumber: '123-456-7891',
+                email: 'my.email@gmail.com',
+            },            {
+                id: '784',
+                firstName: 'Test',
+                lastName: 'Three',
+                leadType: 'Buyer',
+                registeredDate: new Date(new Date().setDate(27)).toDateString(),
+                phoneNumber: '123-456-7891',
+                email: 'my.email@gmail.com',
+            },            {
+                id: '785',
+                firstName: 'Test',
+                lastName: 'Three',
+                leadType: 'Buyer',
+                registeredDate: new Date(new Date().setDate(27)).toDateString(),
+                phoneNumber: '123-456-7891',
+                email: 'my.email@gmail.com',
+            },            {
+                id: '786',
+                firstName: 'Test',
+                lastName: 'Three',
+                leadType: 'Buyer',
+                registeredDate: new Date(new Date().setDate(27)).toDateString(),
+                phoneNumber: '123-456-7891',
+                email: 'my.email@gmail.com',
+            },            {
+                id: '787',
+                firstName: 'Test',
+                lastName: 'Three',
+                leadType: 'Buyer',
+                registeredDate: new Date(new Date().setDate(27)).toDateString(),
+                phoneNumber: '123-456-7891',
+                email: 'my.email@gmail.com',
+            },            {
+                id: '788',
+                firstName: 'Test',
+                lastName: 'Three',
+                leadType: 'Buyer',
+                registeredDate: new Date(new Date().setDate(27)).toDateString(),
+                phoneNumber: '123-456-7891',
+                email: 'my.email@gmail.com',
+            },            {
                 id: '789',
                 firstName: 'Test',
                 lastName: 'Three',
                 leadType: 'Buyer',
                 registeredDate: new Date(new Date().setDate(27)).toDateString(),
-            },
+                phoneNumber: '123-456-7891',
+                email: 'my.email@gmail.com',
+            },            {
+                id: '790',
+                firstName: 'Test',
+                lastName: 'Three',
+                leadType: 'Buyer',
+                registeredDate: new Date(new Date().setDate(27)).toDateString(),
+                phoneNumber: '123-456-7891',
+                email: 'my.email@gmail.com',
+            },            {
+                id: '791',
+                firstName: 'Test',
+                lastName: 'Three',
+                leadType: 'Buyer',
+                registeredDate: new Date(new Date().setDate(27)).toDateString(),
+                phoneNumber: '123-456-7891',
+                email: 'my.email@gmail.com',
+            },            {
+                id: '792',
+                firstName: 'Test',
+                lastName: 'Three',
+                leadType: 'Buyer',
+                registeredDate: new Date(new Date().setDate(27)).toDateString(),
+                phoneNumber: '123-456-7891',
+                email: 'my.email@gmail.com',
+            },        
         ];
         commit('setLeads', mockLeads);
     },

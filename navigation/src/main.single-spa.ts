@@ -11,6 +11,12 @@ const vueLifecycles = singleSpaVue({
     render: (h: any) => h(App),
     router,
     el: '#nav-here',
+    methods: {
+      setActive: function() {
+alert('why here');
+console.log('why here');
+      }
+    }
   },
 });
 
