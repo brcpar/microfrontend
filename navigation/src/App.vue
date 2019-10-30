@@ -10,7 +10,7 @@
       <div class="nav-item">
         <router-link to="/dashboard">Dashboard</router-link>
       </div>
-      <div class="nav-item" v-on:click="setActive(),setActive2()">
+      <div class="nav-item">
         <router-link v-bind:class="{'router-link-active' : $route.path.startsWith('/agents') }" to="/agents/manage">Agents</router-link>
       </div>
       <Agents v-if="this.$route.path.startsWith('/agents')" />
@@ -27,35 +27,11 @@ import Agents from './components/agents.vue';
   components: {
     Agents,
   },
-  // data() {
-  //   return {
-  //     colorNav: true,
-  //     isActive: false,
-  //   }
-  // },
-  methods: {
-    setActive: function() {
-      debugger;
-      // if (this.$data.colorNav) {
-      //   alert('is true');
-      // }
-      // else{
-      //   alert('is false');
-      // }
-    },
-  },
 })
 export default class App extends Vue {
   public data() {
     return {
-      isActive: false,
-      colorNav: false,
     };
-  }
-  public setActive2() {
-    debugger;
-    alert('sup homie2');
-    console.log('setActive2');
   }
 }
 </script>

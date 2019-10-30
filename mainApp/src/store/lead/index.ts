@@ -13,6 +13,8 @@ export const state: LeadState = {
         lastName: '',
         leadType: '',
         registeredDate: '',
+        phoneNumber: '',
+        email: '',
     },
 };
 

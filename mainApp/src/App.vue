@@ -3,7 +3,7 @@
 <v-app class="leadListApp">
   <v-content>
     <universal-lead-details v-if="selectedLead.id !== ''"/>
-    <lead-list @do-thing="doThing"/>
+    <lead-list />
   </v-content>
 </v-app>
 </div>
@@ -21,11 +21,6 @@ import { mapState } from 'vuex';
     LeadList,
     UniversalLeadDetails,
   },
-  methods:{
-    setActive: function() {
-      debugger;
-    }
-  },
   computed:{
     ...mapState('lead', ['selectedLead'])
     }
@@ -34,14 +29,6 @@ export default class App extends Vue {
   data() {
     return {
     }
-  }
-  public setActive(){
-    debugger;
-  }
-  private doThing(item){
-    debugger;
-    // this.selectedLead = item;
-    // this.$data.shouldShowComponent = true;
   }
 }
 </script>

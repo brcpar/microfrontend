@@ -3,10 +3,10 @@ import { LeadState, Lead } from './types';
 import { RootState } from '..';
 
 export const actions: ActionTree<LeadState, RootState> = {
-    setLead({commit}, lead:Lead){
+    setLead({commit}, lead: Lead) {
         commit('setLead', lead);
     },
-    setLeadDefault({commit}){
+    setLeadDefault({commit}) {
         commit('setLead', {        
             id: '',
             firstName: '',
@@ -71,7 +71,7 @@ export const actions: ActionTree<LeadState, RootState> = {
                 registeredDate: new Date(new Date().setDate(27)).toDateString(),
                 phoneNumber: '123-456-7891',
                 email: 'my.email@gmail.com',
-            },
+            },            
             {
                 id: 'stu',
                 firstName: 'Test',
@@ -80,7 +80,8 @@ export const actions: ActionTree<LeadState, RootState> = {
                 registeredDate: new Date(new Date().setDate(1)).toDateString(),
                 phoneNumber: '123-456-7891',
                 email: 'my.email@gmail.com',
-            },            {
+            },
+            {
                 id: 'vwx',
                 firstName: 'Test',
                 lastName: 'Two',
@@ -88,7 +89,8 @@ export const actions: ActionTree<LeadState, RootState> = {
                 registeredDate: new Date(new Date().setDate(13)).toDateString(),
                 phoneNumber: '123-456-7891',
                 email: 'my.email@gmail.com',
-            },            {
+            },
+            {
                 id: 'yz0',
                 firstName: 'Test',
                 lastName: 'Three',
@@ -96,7 +98,8 @@ export const actions: ActionTree<LeadState, RootState> = {
                 registeredDate: new Date(new Date().setDate(27)).toDateString(),
                 phoneNumber: '123-456-7891',
                 email: 'my.email@gmail.com',
-            },            {
+            },
+            {
                 id: '123',
                 firstName: 'Test',
                 lastName: 'One',
@@ -104,7 +107,8 @@ export const actions: ActionTree<LeadState, RootState> = {
                 registeredDate: new Date(new Date().setDate(1)).toDateString(),
                 phoneNumber: '123-456-7891',
                 email: 'my.email@gmail.com',
-            },            {
+            },
+            {
                 id: '456',
                 firstName: 'Test',
                 lastName: 'Two',
@@ -112,7 +116,8 @@ export const actions: ActionTree<LeadState, RootState> = {
                 registeredDate: new Date(new Date().setDate(13)).toDateString(),
                 phoneNumber: '123-456-7891',
                 email: 'my.email@gmail.com',
-            },            {
+            },
+            {
                 id: '7891',
                 firstName: 'Test',
                 lastName: 'Three',
@@ -120,7 +125,8 @@ export const actions: ActionTree<LeadState, RootState> = {
                 registeredDate: new Date(new Date().setDate(27)).toDateString(),
                 phoneNumber: '123-456-7891',
                 email: 'my.email@gmail.com',
-            },            {
+            },
+            {
                 id: '781',
                 firstName: 'Test',
                 lastName: 'Three',
@@ -128,7 +134,8 @@ export const actions: ActionTree<LeadState, RootState> = {
                 registeredDate: new Date(new Date().setDate(27)).toDateString(),
                 phoneNumber: '123-456-7891',
                 email: 'my.email@gmail.com',
-            },            {
+            },
+            {
                 id: '782',
                 firstName: 'Test',
                 lastName: 'Three',
@@ -136,7 +143,8 @@ export const actions: ActionTree<LeadState, RootState> = {
                 registeredDate: new Date(new Date().setDate(27)).toDateString(),
                 phoneNumber: '123-456-7891',
                 email: 'my.email@gmail.com',
-            },            {
+            },
+            {
                 id: '783',
                 firstName: 'Test',
                 lastName: 'Three',
@@ -144,7 +152,8 @@ export const actions: ActionTree<LeadState, RootState> = {
                 registeredDate: new Date(new Date().setDate(27)).toDateString(),
                 phoneNumber: '123-456-7891',
                 email: 'my.email@gmail.com',
-            },            {
+            },
+            {
                 id: '784',
                 firstName: 'Test',
                 lastName: 'Three',
@@ -152,7 +161,8 @@ export const actions: ActionTree<LeadState, RootState> = {
                 registeredDate: new Date(new Date().setDate(27)).toDateString(),
                 phoneNumber: '123-456-7891',
                 email: 'my.email@gmail.com',
-            },            {
+            },
+            {
                 id: '785',
                 firstName: 'Test',
                 lastName: 'Three',
@@ -160,7 +170,8 @@ export const actions: ActionTree<LeadState, RootState> = {
                 registeredDate: new Date(new Date().setDate(27)).toDateString(),
                 phoneNumber: '123-456-7891',
                 email: 'my.email@gmail.com',
-            },            {
+            },
+            {
                 id: '786',
                 firstName: 'Test',
                 lastName: 'Three',
@@ -168,7 +179,8 @@ export const actions: ActionTree<LeadState, RootState> = {
                 registeredDate: new Date(new Date().setDate(27)).toDateString(),
                 phoneNumber: '123-456-7891',
                 email: 'my.email@gmail.com',
-            },            {
+            },
+            {
                 id: '787',
                 firstName: 'Test',
                 lastName: 'Three',
@@ -176,7 +188,8 @@ export const actions: ActionTree<LeadState, RootState> = {
                 registeredDate: new Date(new Date().setDate(27)).toDateString(),
                 phoneNumber: '123-456-7891',
                 email: 'my.email@gmail.com',
-            },            {
+            },
+            {
                 id: '788',
                 firstName: 'Test',
                 lastName: 'Three',
@@ -184,7 +197,8 @@ export const actions: ActionTree<LeadState, RootState> = {
                 registeredDate: new Date(new Date().setDate(27)).toDateString(),
                 phoneNumber: '123-456-7891',
                 email: 'my.email@gmail.com',
-            },            {
+            },
+            {
                 id: '789',
                 firstName: 'Test',
                 lastName: 'Three',
@@ -192,7 +206,8 @@ export const actions: ActionTree<LeadState, RootState> = {
                 registeredDate: new Date(new Date().setDate(27)).toDateString(),
                 phoneNumber: '123-456-7891',
                 email: 'my.email@gmail.com',
-            },            {
+            },
+            {
                 id: '790',
                 firstName: 'Test',
                 lastName: 'Three',
@@ -200,7 +215,8 @@ export const actions: ActionTree<LeadState, RootState> = {
                 registeredDate: new Date(new Date().setDate(27)).toDateString(),
                 phoneNumber: '123-456-7891',
                 email: 'my.email@gmail.com',
-            },            {
+            },
+            {
                 id: '791',
                 firstName: 'Test',
                 lastName: 'Three',
@@ -208,7 +224,8 @@ export const actions: ActionTree<LeadState, RootState> = {
                 registeredDate: new Date(new Date().setDate(27)).toDateString(),
                 phoneNumber: '123-456-7891',
                 email: 'my.email@gmail.com',
-            },            {
+            },
+            {
                 id: '792',
                 firstName: 'Test',
                 lastName: 'Three',
