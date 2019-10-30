@@ -1,6 +1,7 @@
 export interface LeadState {
     leads: Lead[];
     selectedLead: Lead;
+    sortedLeads: Lead[];
 }
 
 export interface Lead {

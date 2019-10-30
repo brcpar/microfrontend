@@ -6,6 +6,7 @@ import {actions} from './actions';
 import {mutations} from './mutations';
 
 export const state: LeadState = {
+    sortedLeads: [],
     leads: [],
     selectedLead: {
         id: '',
@@ -21,6 +22,14 @@ export const state: LeadState = {
 const namespaced: boolean = true;
 
 export const lead: Module<LeadState, RootState> = {
+    namespaced,
+    state,
+    getters,
+    actions,
+    mutations,
+};
+
+export const sortedLeads: Module<LeadState, RootState> = {
     namespaced,
     state,
     getters,

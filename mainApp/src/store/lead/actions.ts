@@ -3,6 +3,24 @@ import { LeadState, Lead } from './types';
 import { RootState } from '..';
 
 export const actions: ActionTree<LeadState, RootState> = {
+    sortLeads({commit, state}, sortType) {
+        debugger;
+        if (state.sortedLeads.length === 0){
+            state.sortedLeads = state.leads.sort((a,b)=>{
+                //if sortType date do this...
+            if (new Date(a.registeredDate) > new Date(b.registeredDate)) {
+              return 1
+            }
+            else {
+              return -1
+            }
+        })
+        }
+        else{
+            state.sortedLeads = state.leads.reverse();
+        }
+      commit('setLeads', state.sortedLeads);
+    },
     setLead({commit}, lead: Lead) {
         commit('setLead', lead);
     },
@@ -15,6 +33,9 @@ export const actions: ActionTree<LeadState, RootState> = {
             registeredDate: '',
             phoneNumber: '',
             email: ''});
+    },
+    setLeads({commit}, leads: Lead[]){
+        commit('setLeads', leads);
     },
     getLeads({commit}) {
         const mockLeads: Lead[] = [

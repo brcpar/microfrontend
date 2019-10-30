@@ -7,7 +7,7 @@
     <span style="font-weight:bold;flex-grow: 1;">
         Lead Type
     </span>
-    <span style="font-weight:bold;flex-grow: 1;" @click="sortLeads()">
+    <span style="font-weight:bold;flex-grow: 1;" @click="sortLeads('registrationDate')">
       Registartion Date
   </span>
   </div>
@@ -32,6 +32,9 @@ import { Component, Vue } from 'vue-property-decorator';
   // methods: mapActions("dialer", ["answerCall"]),
   computed: mapState('lead', ['leads']),
   components: { LeadCard },
+  methods:{
+    ...mapActions('lead', ['sortLeads'])
+  }
 })
 export default class LeadList extends Vue {
   public name = 'list';
@@ -45,25 +48,6 @@ export default class LeadList extends Vue {
     return {
         firstSort: true,
     }
-  }
-  public sortLeads(){
-    debugger;
-    
-    if (this.$data.firstSort) {
-      this.leads = this.leads.sort(function(a,b){
-        if (new Date(a.registeredDate) > new Date(b.registeredDate)) {
-          return 1
-        }
-        else {
-          return -1
-        }
-      })
-      this.$data.firstSort = false;
-    }
-    else {
-      this.leads = this.leads.reverse();
-    }
-    debugger;
   }
 }
 </script>
