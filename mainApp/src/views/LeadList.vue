@@ -7,7 +7,7 @@
     <span style="font-weight:bold;flex-grow: 1;">
         Lead Type
     </span>
-    <span style="font-weight:bold;flex-grow: 1;">
+    <span style="font-weight:bold;flex-grow: 1;" @click="sortLeads()">
       Registartion Date
   </span>
   </div>
@@ -40,6 +40,30 @@ export default class LeadList extends Vue {
   };
   private created() {
     this.$store.dispatch('lead/getLeads');
+  }
+  public data(){
+    return {
+        firstSort: true,
+    }
+  }
+  public sortLeads(){
+    debugger;
+    
+    if (this.$data.firstSort) {
+      this.leads = this.leads.sort(function(a,b){
+        if (new Date(a.registeredDate) > new Date(b.registeredDate)) {
+          return 1
+        }
+        else {
+          return -1
+        }
+      })
+      this.$data.firstSort = false;
+    }
+    else {
+      this.leads = this.leads.reverse();
+    }
+    debugger;
   }
 }
 </script>
