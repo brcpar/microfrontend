@@ -31,7 +31,7 @@
   </head>
   <body>
     <div id="multi-spa-container">
-      <div id="nav-here"></div>
+      <div id="navbar-app"></div>
       <div id="mainapp"></div>
       <!-- <div id="dashboardapp"></div>       -->
     </div>
@@ -67,7 +67,7 @@
           location => location.pathname.startsWith('/agents'),
         )
         singleSpa.start();
-      })
+      });
     </script>
     <import-map-overrides-full></import-map-overrides-full>
   </body>

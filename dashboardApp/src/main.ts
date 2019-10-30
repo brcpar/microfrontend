@@ -10,7 +10,7 @@ const vueLifecycles = singleSpaVue({
   appOptions: {
     render: (h: any) => h(App),
     router,
-    el: '#dashboardapp'    
+    el: '#mainapp'    
   },
 });
 
