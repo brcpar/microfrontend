@@ -1,5 +1,8 @@
 <template>
   <div class="navbar-app" style="min-height:100vh">
+    <div class="navbar-header">
+      <router-link to="/main" class="navbar-brand"><span class="logo-figure"></span></router-link>
+    </div>
     <div class="nav">
       <div class="nav-item">
         <router-link to="/main">Main application</router-link>
@@ -116,5 +119,40 @@ export default class App extends Vue {
   margin-left: 0.75em;
   flex: 1;
   margin-right: 0.75em;
+}
+
+.navbar-app .navbar-header {
+  flex: 0 0 auto;
+  height: 60px;
+  background-color: #34A2BC;
+  float: none;
+  transition: all 320ms cubic-bezier(0.6, 0, 0.735, 0.045);
+}
+
+.navbar-app>.navbar-header>.navbar-brand {
+  display: block;
+  width: 100%;
+  line-height: 50px;
+  height: 50px;
+  text-align: center;
+  transition: all 320ms cubic-bezier(0.6, 0, 0.735, 0.045);
+  padding: 0;
+  overflow: hidden;
+  margin-left: 0;
+  float: left;
+  font-size: 18px;
+}
+
+.navbar-app>.navbar-header>.navbar-brand>.logo-figure {
+  width: 100%;
+  background-image: url(https://searchgothamcityhomes.com/img/dashboard/logo/logo-figure.png);
+  background-repeat: no-repeat;
+  background-position: center calc(29px - 16px);
+  position: relative;
+  background-size: 32px 32px;
+  display: inline-block;
+  vertical-align: top;
+  text-decoration: none;
+  height: 50px;
 }
 </style>
