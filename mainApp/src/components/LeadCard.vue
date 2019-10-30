@@ -1,6 +1,6 @@
 <template>
 <v-hover v-slot:default="{ hover }">
-  <v-row no-gutters :class="{active: hover}"  v-on:click="dothis()" >
+  <v-row no-gutters :class="{active: hover}"  v-on:click="setLead()" >
       <v-col >
         <v-card class="pa-2 card-cell" outlined tile>
           {{lead.firstName}} {{lead.lastName}} {{thisValue}}
@@ -32,26 +32,8 @@ export default class LeadCard extends Vue {
       thisValue: 'passedValue',
     };
   }
-  public computed(){
-
-  }
-  public dothis() {
-    debugger;
+  public setLead() {
     this.$store.dispatch('lead/setLead', this.$props.lead);
-
-
-    if (this.$data.thisValue === 'nope'){
-      this.$data.thisValue = 'yup'
-    }
-    else {
-      this.$data.thisValue = 'nope'
-    }
-    if (this.$props.lead.firstName === 'nope'){
-          this.$props.lead.firstName = "yup"
-    }
-    else{
-      this.$props.lead.firstName = "nope"
-    }
   }
 }
 </script>

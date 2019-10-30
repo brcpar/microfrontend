@@ -41,10 +41,6 @@ export default class LeadList extends Vue {
   private created() {
     this.$store.dispatch('lead/getLeads');
   }
-  // public doThing(item){
-  //   debugger;
-  //   this.$emit('do-thing', item)
-  // }
 }
 </script>
 

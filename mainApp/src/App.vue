@@ -11,7 +11,7 @@
 
 <script lang="ts">
 import { Component } from 'vue-property-decorator';
-import Vue from 'vue'
+import Vue from 'vue';
 import LeadList from './views/LeadList.vue';
 import UniversalLeadDetails from '@/components/UniversalLeadDetails.vue';
 import { mapState } from 'vuex';
@@ -21,14 +21,14 @@ import { mapState } from 'vuex';
     LeadList,
     UniversalLeadDetails,
   },
-  computed:{
-    ...mapState('lead', ['selectedLead'])
-    }
+  computed: {
+    ...mapState('lead', ['selectedLead']),
+    },
 })
 export default class App extends Vue {
-  data() {
+  public data() {
     return {
-    }
+    };
   }
 }
 </script>

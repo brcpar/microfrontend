@@ -7,7 +7,7 @@ export const actions: ActionTree<LeadState, RootState> = {
         commit('setLead', lead);
     },
     setLeadDefault({commit}) {
-        commit('setLead', {        
+        commit('setLead', {
             id: '',
             firstName: '',
             lastName: '',
@@ -71,7 +71,7 @@ export const actions: ActionTree<LeadState, RootState> = {
                 registeredDate: new Date(new Date().setDate(27)).toDateString(),
                 phoneNumber: '123-456-7891',
                 email: 'my.email@gmail.com',
-            },            
+            },
             {
                 id: 'stu',
                 firstName: 'Test',
@@ -233,7 +233,7 @@ export const actions: ActionTree<LeadState, RootState> = {
                 registeredDate: new Date(new Date().setDate(27)).toDateString(),
                 phoneNumber: '123-456-7891',
                 email: 'my.email@gmail.com',
-            },        
+            },
         ];
         commit('setLeads', mockLeads);
     },
