@@ -3,28 +3,25 @@ import { LeadState, Lead } from './types';
 import { RootState } from '..';
 
 export const actions: ActionTree<LeadState, RootState> = {
-    sortLeads({commit, state}, sortType) {
-        debugger;
-        if (state.sortedLeads.length === 0){
-            state.sortedLeads = state.leads.sort((a,b)=>{
-                //if sortType date do this...
-            if (new Date(a.registeredDate) > new Date(b.registeredDate)) {
-              return 1
-            }
-            else {
-              return -1
-            }
-        })
-        }
-        else{
+    sortLeads({ commit, state }, sortType) {
+        if (state.sortedLeads.length === 0) {
+            state.sortedLeads = state.leads.sort((a, b) => {
+                // if sortType date do this...
+                if (new Date(a.registeredDate) > new Date(b.registeredDate)) {
+                    return 1;
+                } else {
+                    return -1;
+                }
+            });
+        } else {
             state.sortedLeads = state.leads.reverse();
         }
-      commit('setLeads', state.sortedLeads);
+        commit('setLeads', state.sortedLeads);
     },
-    setLead({commit}, lead: Lead) {
+    setLead({ commit }, lead: Lead) {
         commit('setLead', lead);
     },
-    setLeadDefault({commit}) {
+    setLeadDefault({ commit }) {
         commit('setLead', {
             id: '',
             firstName: '',
@@ -32,12 +29,13 @@ export const actions: ActionTree<LeadState, RootState> = {
             leadType: '',
             registeredDate: '',
             phoneNumber: '',
-            email: ''});
+            email: '',
+        });
     },
-    setLeads({commit}, leads: Lead[]){
+    setLeads({ commit }, leads: Lead[]) {
         commit('setLeads', leads);
     },
-    getLeads({commit}) {
+    getLeads({ commit }) {
         const mockLeads: Lead[] = [
             {
                 id: 'abc',
@@ -54,7 +52,9 @@ export const actions: ActionTree<LeadState, RootState> = {
                 lastName: 'Person',
                 leadType: 'Seller',
                 registeredDate: new Date(new Date().setDate(13)).toDateString(),
-                phoneNumber: Math.floor(100000000 + Math.random() * 900000000).toString().slice(0,3)+'-'+Math.floor(100000000 + Math.random() * 900000000).toString().slice(3,6)+'-'+Math.floor(100000000 + Math.random() * 900000000).toString().slice(6,15),
+                phoneNumber: Math.floor(100000000 + Math.random() * 900000000).toString().slice(0, 3) +
+                    '-' + Math.floor(100000000 + Math.random() * 900000000).toString().slice(3, 6) + '-' +
+                    Math.floor(100000000 + Math.random() * 900000000).toString().slice(6, 15),
                 email: 'my.email@gmail.com',
             },
             {
@@ -63,7 +63,9 @@ export const actions: ActionTree<LeadState, RootState> = {
                 lastName: 'Three',
                 leadType: 'Seller',
                 registeredDate: new Date(new Date().setDate(27)).toDateString(),
-                phoneNumber: Math.floor(100000000 + Math.random() * 900000000).toString().slice(0,3)+'-'+Math.floor(100000000 + Math.random() * 900000000).toString().slice(3,6)+'-'+Math.floor(100000000 + Math.random() * 900000000).toString().slice(6,15),
+                phoneNumber: Math.floor(100000000 + Math.random() * 900000000).toString().slice(0, 3) +
+                    '-' + Math.floor(100000000 + Math.random() * 900000000).toString().slice(3, 6) + '-' +
+                    Math.floor(100000000 + Math.random() * 900000000).toString().slice(6, 15),
                 email: 'my.email@gmail.com',
             },
             {
@@ -72,7 +74,9 @@ export const actions: ActionTree<LeadState, RootState> = {
                 lastName: 'Over',
                 leadType: 'Buyer',
                 registeredDate: new Date(new Date().setDate(1)).toDateString(),
-                phoneNumber: Math.floor(100000000 + Math.random() * 900000000).toString().slice(0,3)+'-'+Math.floor(100000000 + Math.random() * 900000000).toString().slice(3,6)+'-'+Math.floor(100000000 + Math.random() * 900000000).toString().slice(6,15),
+                phoneNumber: Math.floor(100000000 + Math.random() * 900000000).toString().slice(0, 3) +
+                    '-' + Math.floor(100000000 + Math.random() * 900000000).toString().slice(3, 6) + '-' +
+                    Math.floor(100000000 + Math.random() * 900000000).toString().slice(6, 15),
                 email: 'my.email@gmail.com',
             },
             {
@@ -81,7 +85,9 @@ export const actions: ActionTree<LeadState, RootState> = {
                 lastName: 'Man',
                 leadType: 'Seller',
                 registeredDate: new Date(new Date().setDate(13)).toDateString(),
-                phoneNumber: Math.floor(100000000 + Math.random() * 900000000).toString().slice(0,3)+'-'+Math.floor(100000000 + Math.random() * 900000000).toString().slice(3,6)+'-'+Math.floor(100000000 + Math.random() * 900000000).toString().slice(6,15),
+                phoneNumber: Math.floor(100000000 + Math.random() * 900000000).toString().slice(0, 3) +
+                    '-' + Math.floor(100000000 + Math.random() * 900000000).toString().slice(3, 6) + '-' +
+                    Math.floor(100000000 + Math.random() * 900000000).toString().slice(6, 15),
                 email: 'my.email@gmail.com',
             },
             {
@@ -90,7 +96,9 @@ export const actions: ActionTree<LeadState, RootState> = {
                 lastName: 'Check',
                 leadType: 'Seller',
                 registeredDate: new Date(new Date().setDate(27)).toDateString(),
-                phoneNumber: Math.floor(100000000 + Math.random() * 900000000).toString().slice(0,3)+'-'+Math.floor(100000000 + Math.random() * 900000000).toString().slice(3,6)+'-'+Math.floor(100000000 + Math.random() * 900000000).toString().slice(6,15),
+                phoneNumber: Math.floor(100000000 + Math.random() * 900000000).toString().slice(0, 3) +
+                    '-' + Math.floor(100000000 + Math.random() * 900000000).toString().slice(3, 6) + '-' +
+                    Math.floor(100000000 + Math.random() * 900000000).toString().slice(6, 15),
                 email: 'my.email@gmail.com',
             },
             {
@@ -99,7 +107,9 @@ export const actions: ActionTree<LeadState, RootState> = {
                 lastName: 'One',
                 leadType: 'Buyer',
                 registeredDate: new Date(new Date().setDate(1)).toDateString(),
-                phoneNumber: Math.floor(100000000 + Math.random() * 900000000).toString().slice(0,3)+'-'+Math.floor(100000000 + Math.random() * 900000000).toString().slice(3,6)+'-'+Math.floor(100000000 + Math.random() * 900000000).toString().slice(6,15),
+                phoneNumber: Math.floor(100000000 + Math.random() * 900000000).toString().slice(0, 3) +
+                    '-' + Math.floor(100000000 + Math.random() * 900000000).toString().slice(3, 6) + '-' +
+                    Math.floor(100000000 + Math.random() * 900000000).toString().slice(6, 15),
                 email: 'my.email@gmail.com',
             },
             {
@@ -108,7 +118,9 @@ export const actions: ActionTree<LeadState, RootState> = {
                 lastName: 'Zers',
                 leadType: 'Seller',
                 registeredDate: new Date(new Date().setDate(13)).toDateString(),
-                phoneNumber: Math.floor(100000000 + Math.random() * 900000000).toString().slice(0,3)+'-'+Math.floor(100000000 + Math.random() * 900000000).toString().slice(3,6)+'-'+Math.floor(100000000 + Math.random() * 900000000).toString().slice(6,15),
+                phoneNumber: Math.floor(100000000 + Math.random() * 900000000).toString().slice(0, 3) +
+                    '-' + Math.floor(100000000 + Math.random() * 900000000).toString().slice(3, 6) + '-' +
+                    Math.floor(100000000 + Math.random() * 900000000).toString().slice(6, 15),
                 email: 'my.email@gmail.com',
             },
             {
@@ -117,7 +129,9 @@ export const actions: ActionTree<LeadState, RootState> = {
                 lastName: 'Folks',
                 leadType: 'Buyer',
                 registeredDate: new Date(new Date().setDate(Math.floor(Math.random() * 30))).toDateString(),
-                phoneNumber: Math.floor(100000000 + Math.random() * 900000000).toString().slice(0,3)+'-'+Math.floor(100000000 + Math.random() * 900000000).toString().slice(3,6)+'-'+Math.floor(100000000 + Math.random() * 900000000).toString().slice(6,15),
+                phoneNumber: Math.floor(100000000 + Math.random() * 900000000).toString().slice(0, 3) +
+                    '-' + Math.floor(100000000 + Math.random() * 900000000).toString().slice(3, 6) + '-' +
+                    Math.floor(100000000 + Math.random() * 900000000).toString().slice(6, 15),
                 email: 'my.email@gmail.com',
             },
             {
@@ -126,7 +140,9 @@ export const actions: ActionTree<LeadState, RootState> = {
                 lastName: 'Come',
                 leadType: 'Seller',
                 registeredDate: new Date(new Date().setDate(Math.floor(Math.random() * 30))).toDateString(),
-                phoneNumber: Math.floor(100000000 + Math.random() * 900000000).toString().slice(0,3)+'-'+Math.floor(100000000 + Math.random() * 900000000).toString().slice(3,6)+'-'+Math.floor(100000000 + Math.random() * 900000000).toString().slice(6,15),
+                phoneNumber: Math.floor(100000000 + Math.random() * 900000000).toString().slice(0, 3) +
+                    '-' + Math.floor(100000000 + Math.random() * 900000000).toString().slice(3, 6) + '-' +
+                    Math.floor(100000000 + Math.random() * 900000000).toString().slice(6, 15),
                 email: 'my.email@gmail.com',
             },
             {

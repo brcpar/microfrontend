@@ -14,7 +14,7 @@
         <router-link to="/dashboard">Dashboard</router-link>
       </div>
       <div class="nav-item">
-        <router-link v-bind:class="{'router-link-active' : $route.path.startsWith('/agents') }" to="/agents/manage">Agents</router-link>
+        <router-link to="/agents">Agents</router-link>
       </div>
       <Agents v-if="this.$route.path.startsWith('/agents')" />
     </div>
@@ -58,7 +58,7 @@ export default class App extends Vue {
 .navbar-app .nav-item > a {
   color: white;
 }
-.navbar-app .nav a.router-link-active {
+.navbar-app .nav .nav-item>a.router-link-active {
   color: #34a2bc;
 }
 .navbar-app .nav a.router-link-exact-active {

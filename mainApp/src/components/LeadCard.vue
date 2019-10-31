@@ -1,37 +1,24 @@
 <template>
-<v-hover v-slot:default="{ hover }">
-  <v-row no-gutters :class="{active: hover}"  v-on:click="setLead()" >
-      <v-col >
-        <v-card class="pa-2 card-cell" outlined tile>
-          {{lead.firstName}} {{lead.lastName}}
-        </v-card>
+  <v-hover v-slot:default="{ hover }">
+    <v-row no-gutters :class="{active: hover}" v-on:click="setLead()">
+      <v-col>
+        <v-card class="pa-2 card-cell" outlined tile>{{lead.firstName}} {{lead.lastName}}</v-card>
       </v-col>
       <v-col>
-        <v-card class="pa-2 card-cell" outlined tile>
-          {{lead.leadType}} Lead
-        </v-card>
+        <v-card class="pa-2 card-cell" outlined tile>{{lead.leadType}} Lead</v-card>
       </v-col>
       <v-col>
-        <v-card class="pa-2 card-cell" outlined tile>
-          {{computedRegisteredDate}}
-        </v-card>
+        <v-card class="pa-2 card-cell" outlined tile>{{computedRegisteredDate}}</v-card>
       </v-col>
-  </v-row>
-</v-hover>
+    </v-row>
+  </v-hover>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
 import { Lead } from '../store/lead/types';
 
-@Component({
-  computed:{
-    computedRegisteredDate: function(){
-          this.lead.registeredDate = new Date(new Date().setDate(Math.floor(Math.random() * 30))).toDateString();
-          return this.lead.registeredDate;
-    }
-  }
-})
+@Component({})
 export default class LeadCard extends Vue {
   @Prop() private lead!: Lead;
   public data() {
@@ -39,8 +26,14 @@ export default class LeadCard extends Vue {
       thisValue: 'passedValue',
     };
   }
+  get computedRegisteredDate() {
+    this.lead.registeredDate = new Date(
+      new Date().setDate(Math.floor(Math.random() * 30)),
+    ).toDateString();
+    return this.lead.registeredDate;
+  }
   public setLead() {
-    this.$store.dispatch('lead/setLead', this.$props.lead);
+    this.$store.dispatch('lead/setLead', this.lead);
   }
 }
 </script>
@@ -61,7 +54,7 @@ li {
 a {
   color: #42b983;
 }
-.odd .card-cell{
+.odd .card-cell {
   background: lightgrey !important;
 }
 .active .card-cell {
