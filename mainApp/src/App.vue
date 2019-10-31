@@ -2,9 +2,10 @@
 <div id="mainapp">
 <v-app class="leadListApp">
   <v-content>
-    <universal-lead-details v-if="selectedLead.id !== ''"/>
-    <lead-list v-show="$route.path === '/main'"/>
-    <this-place-view v-show="$route.path.startsWith('/main/this')"/>
+        <universal-lead-details v-if="selectedLead.id !== ''"/>
+    <router-view/>
+    <!-- <lead-list v-show="$route.path === '/main'"/>
+    <this-place-view v-show="$route.path.startsWith('/main/this')"/> -->
   </v-content>
 </v-app>
 </div>
@@ -30,7 +31,6 @@ import { mapState } from 'vuex';
 })
 export default class App extends Vue {
   public data() {
-    debugger;
     return {
     };
   }

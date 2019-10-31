@@ -43,7 +43,7 @@ export const actions: ActionTree<LeadState, RootState> = {
                 lastName: 'One',
                 leadType: 'Buyer',
                 registeredDate: '',
-                phoneNumber: '',
+                phoneNumber: '123-456-7891',
                 email: '',
             },
             {

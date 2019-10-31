@@ -30,4 +30,8 @@ li {
 a {
   color: #42b983;
 }
+.this-place {
+  left: 0px;
+  position: absolute;
+}
 </style>

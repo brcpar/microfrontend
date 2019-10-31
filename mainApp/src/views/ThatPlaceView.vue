@@ -1,6 +1,6 @@
 <template>
     <div class="this-place" style="position:absolute;left:0px;">
-        This Place
+        That Place
     </div>
 </template>
 <script lang="ts">
