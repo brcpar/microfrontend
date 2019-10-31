@@ -1,5 +1,5 @@
 <template>
-  <v-container class="leadList">
+  <v-container class="leadList" style="margin-top: 40px;">
     <div style="display:flex">
       <span style="font-weight:bold;flex-grow: 1;">Lead Name</span>
       <span style="font-weight:bold;flex-grow: 1;">Lead Type</span>
