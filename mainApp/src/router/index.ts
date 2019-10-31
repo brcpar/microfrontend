@@ -1,14 +1,20 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import LeadList from '../views/LeadList.vue';
+import ThisPlaceView from '../views/ThisPlaceView.vue';
 
 Vue.use(VueRouter);
 
 const routes = [
   {
-    path: '/',
-    name: 'list',
+    path: '/main',
+    name: 'main',
     component: LeadList,
+  },
+  {
+    path: '/main/this',
+    name: 'this',
+    component: ThisPlaceView,
   },
   // {
   //   path: '/about',

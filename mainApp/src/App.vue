@@ -3,7 +3,8 @@
 <v-app class="leadListApp">
   <v-content>
     <universal-lead-details v-if="selectedLead.id !== ''"/>
-    <lead-list />
+    <lead-list v-show="$route.path === '/main'"/>
+    <this-place-view v-show="$route.path.startsWith('/main/this')"/>
   </v-content>
 </v-app>
 </div>
@@ -13,6 +14,7 @@
 import { Component } from 'vue-property-decorator';
 import Vue from 'vue';
 import LeadList from './views/LeadList.vue';
+import ThisPlaceView from './views/ThisPlaceView.vue';
 import UniversalLeadDetails from '@/components/UniversalLeadDetails.vue';
 import { mapState } from 'vuex';
 
@@ -20,6 +22,7 @@ import { mapState } from 'vuex';
   components: {
     LeadList,
     UniversalLeadDetails,
+    ThisPlaceView,
   },
   computed: {
     ...mapState('lead', ['selectedLead']),
@@ -27,6 +30,7 @@ import { mapState } from 'vuex';
 })
 export default class App extends Vue {
   public data() {
+    debugger;
     return {
     };
   }

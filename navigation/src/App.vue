@@ -7,6 +7,7 @@
       <div class="nav-item">
         <router-link to="/main">Main application</router-link>
       </div>
+      <MainAppSubNav v-if="this.$route.path.startsWith('/main')" />
       <div class="nav-item">
         <router-link to="/about">About</router-link>
       </div>
@@ -25,10 +26,12 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import Agents from './components/agents.vue';
+import MainAppSubNav from './components/mainAppSubNav.vue';
 
 @Component({
   components: {
     Agents,
+    MainAppSubNav,
   },
 })
 export default class App extends Vue {
