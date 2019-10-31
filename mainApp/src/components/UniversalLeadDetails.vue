@@ -33,7 +33,7 @@
                 style="min-height: 64px"
                 class="img-circle img-bordered-white pointer js-social-link"
                 title=" Social Info needs to be pulled "
-                src="//s-static.cinccdn.com/images/lead.png"
+                src="https://vignette.wikia.nocookie.net/thebiglebowski/images/7/7e/The_Dude.jpeg/revision/latest?cb=20111216183045"
               />
 
               <div class="leftcolumn-communicationicons">
@@ -167,6 +167,7 @@ import { Lead } from '../store/lead/types';
 })
 export default class UniversalLeadDetails extends Vue {
   @Prop() private lead!: Lead;
+
   public closeUniversalDetails() {
     this.$store.dispatch('lead/setLeadDefault');
   }
@@ -184,7 +185,10 @@ export default class UniversalLeadDetails extends Vue {
       Math.floor(100000000 + Math.random() * 900000000)
         .toString()
         .slice(6, 15);
-    return phoneNumber;
+        if ( this.$store.state.lead.selectedLead.phoneNumber === '123-456-7891') {
+          this.$store.state.lead.selectedLead.phoneNumber = phoneNumber;
+        }
+    return this.$store.state.lead.selectedLead.phoneNumber;
   }
   get computedEmail() {
     return (

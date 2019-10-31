@@ -52,9 +52,7 @@ export const actions: ActionTree<LeadState, RootState> = {
                 lastName: 'Person',
                 leadType: 'Seller',
                 registeredDate: new Date(new Date().setDate(13)).toDateString(),
-                phoneNumber: Math.floor(100000000 + Math.random() * 900000000).toString().slice(0, 3) +
-                    '-' + Math.floor(100000000 + Math.random() * 900000000).toString().slice(3, 6) + '-' +
-                    Math.floor(100000000 + Math.random() * 900000000).toString().slice(6, 15),
+                phoneNumber: '123-456-7891',
                 email: 'my.email@gmail.com',
             },
             {
@@ -63,9 +61,7 @@ export const actions: ActionTree<LeadState, RootState> = {
                 lastName: 'Three',
                 leadType: 'Seller',
                 registeredDate: new Date(new Date().setDate(27)).toDateString(),
-                phoneNumber: Math.floor(100000000 + Math.random() * 900000000).toString().slice(0, 3) +
-                    '-' + Math.floor(100000000 + Math.random() * 900000000).toString().slice(3, 6) + '-' +
-                    Math.floor(100000000 + Math.random() * 900000000).toString().slice(6, 15),
+                phoneNumber: '123-456-7891',
                 email: 'my.email@gmail.com',
             },
             {
@@ -74,9 +70,7 @@ export const actions: ActionTree<LeadState, RootState> = {
                 lastName: 'Over',
                 leadType: 'Buyer',
                 registeredDate: new Date(new Date().setDate(1)).toDateString(),
-                phoneNumber: Math.floor(100000000 + Math.random() * 900000000).toString().slice(0, 3) +
-                    '-' + Math.floor(100000000 + Math.random() * 900000000).toString().slice(3, 6) + '-' +
-                    Math.floor(100000000 + Math.random() * 900000000).toString().slice(6, 15),
+                phoneNumber: '123-456-7891',
                 email: 'my.email@gmail.com',
             },
             {
@@ -85,9 +79,7 @@ export const actions: ActionTree<LeadState, RootState> = {
                 lastName: 'Man',
                 leadType: 'Seller',
                 registeredDate: new Date(new Date().setDate(13)).toDateString(),
-                phoneNumber: Math.floor(100000000 + Math.random() * 900000000).toString().slice(0, 3) +
-                    '-' + Math.floor(100000000 + Math.random() * 900000000).toString().slice(3, 6) + '-' +
-                    Math.floor(100000000 + Math.random() * 900000000).toString().slice(6, 15),
+                phoneNumber: '123-456-7891',
                 email: 'my.email@gmail.com',
             },
             {
@@ -96,9 +88,7 @@ export const actions: ActionTree<LeadState, RootState> = {
                 lastName: 'Check',
                 leadType: 'Seller',
                 registeredDate: new Date(new Date().setDate(27)).toDateString(),
-                phoneNumber: Math.floor(100000000 + Math.random() * 900000000).toString().slice(0, 3) +
-                    '-' + Math.floor(100000000 + Math.random() * 900000000).toString().slice(3, 6) + '-' +
-                    Math.floor(100000000 + Math.random() * 900000000).toString().slice(6, 15),
+                phoneNumber: '123-456-7891',
                 email: 'my.email@gmail.com',
             },
             {
@@ -107,9 +97,7 @@ export const actions: ActionTree<LeadState, RootState> = {
                 lastName: 'One',
                 leadType: 'Buyer',
                 registeredDate: new Date(new Date().setDate(1)).toDateString(),
-                phoneNumber: Math.floor(100000000 + Math.random() * 900000000).toString().slice(0, 3) +
-                    '-' + Math.floor(100000000 + Math.random() * 900000000).toString().slice(3, 6) + '-' +
-                    Math.floor(100000000 + Math.random() * 900000000).toString().slice(6, 15),
+                phoneNumber: '123-456-7891',
                 email: 'my.email@gmail.com',
             },
             {
@@ -118,9 +106,7 @@ export const actions: ActionTree<LeadState, RootState> = {
                 lastName: 'Zers',
                 leadType: 'Seller',
                 registeredDate: new Date(new Date().setDate(13)).toDateString(),
-                phoneNumber: Math.floor(100000000 + Math.random() * 900000000).toString().slice(0, 3) +
-                    '-' + Math.floor(100000000 + Math.random() * 900000000).toString().slice(3, 6) + '-' +
-                    Math.floor(100000000 + Math.random() * 900000000).toString().slice(6, 15),
+                phoneNumber: '123-456-7891',
                 email: 'my.email@gmail.com',
             },
             {
@@ -129,9 +115,7 @@ export const actions: ActionTree<LeadState, RootState> = {
                 lastName: 'Folks',
                 leadType: 'Buyer',
                 registeredDate: new Date(new Date().setDate(Math.floor(Math.random() * 30))).toDateString(),
-                phoneNumber: Math.floor(100000000 + Math.random() * 900000000).toString().slice(0, 3) +
-                    '-' + Math.floor(100000000 + Math.random() * 900000000).toString().slice(3, 6) + '-' +
-                    Math.floor(100000000 + Math.random() * 900000000).toString().slice(6, 15),
+                phoneNumber: '123-456-7891',
                 email: 'my.email@gmail.com',
             },
             {
@@ -140,9 +124,7 @@ export const actions: ActionTree<LeadState, RootState> = {
                 lastName: 'Come',
                 leadType: 'Seller',
                 registeredDate: new Date(new Date().setDate(Math.floor(Math.random() * 30))).toDateString(),
-                phoneNumber: Math.floor(100000000 + Math.random() * 900000000).toString().slice(0, 3) +
-                    '-' + Math.floor(100000000 + Math.random() * 900000000).toString().slice(3, 6) + '-' +
-                    Math.floor(100000000 + Math.random() * 900000000).toString().slice(6, 15),
+                phoneNumber: '123-456-7891',
                 email: 'my.email@gmail.com',
             },
             {
@@ -160,7 +142,7 @@ export const actions: ActionTree<LeadState, RootState> = {
                 lastName: 'Do',
                 leadType: 'Buyer',
                 registeredDate: new Date(new Date().setDate(Math.floor(Math.random() * 30))).toDateString(),
-                phoneNumber: Math.floor(100000000 + Math.random() * 900000000).toString(),
+                phoneNumber: '123-456-7891',
                 email: 'my.email@gmail.com',
             },
             {
