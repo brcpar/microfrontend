@@ -24,7 +24,8 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+import { Component } from 'vue-property-decorator';
+import Vue from 'vue';
 import Agents from './components/agents.vue';
 import MainAppSubNav from './components/mainAppSubNav.vue';
 
@@ -34,12 +35,7 @@ import MainAppSubNav from './components/mainAppSubNav.vue';
     MainAppSubNav,
   },
 })
-export default class App extends Vue {
-  public data() {
-    return {
-    };
-  }
-}
+export default class App extends Vue {}
 </script>
 
 <style>

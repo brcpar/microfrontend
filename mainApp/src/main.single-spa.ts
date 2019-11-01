@@ -4,6 +4,7 @@ import router from './router';
 import singleSpaVue from 'single-spa-vue';
 import store from './store';
 import vuetify from './plugins/vuetify';
+import globalStore from './plugins/globalStoreIndex';
 
 Vue.config.productionTip = false;
 
@@ -14,6 +15,7 @@ const vueLifecycles = singleSpaVue({
     router,
     store,
     vuetify,
+    globalStore,
     el: '#mainapp',
   },
 });

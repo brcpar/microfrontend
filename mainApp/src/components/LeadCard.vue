@@ -33,6 +33,7 @@ export default class LeadCard extends Vue {
     return this.lead.registeredDate;
   }
   public setLead() {
+    this.$globalStore.addValue('lead', this.lead.id);
     this.$store.dispatch('lead/setLead', this.lead);
   }
 }
