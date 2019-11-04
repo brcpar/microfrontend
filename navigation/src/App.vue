@@ -14,6 +14,7 @@
       <div class="nav-item">
         <router-link to="/dashboard">Dashboard</router-link>
       </div>
+      <DashboardAppSubNav v-if="this.$route.path.startsWith('/dashboard')"></DashboardAppSubNav>
       <div class="nav-item">
         <router-link to="/agents">Agents</router-link>
       </div>
@@ -28,11 +29,13 @@ import { Component } from 'vue-property-decorator';
 import Vue from 'vue';
 import Agents from './components/agents.vue';
 import MainAppSubNav from './components/mainAppSubNav.vue';
+import DashboardAppSubNav from './components/dashboardAppSubNav.vue';
 
 @Component({
   components: {
     Agents,
     MainAppSubNav,
+    DashboardAppSubNav
   },
 })
 export default class App extends Vue {}

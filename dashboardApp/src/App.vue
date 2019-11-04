@@ -1,6 +1,6 @@
 <template>
   <div id="mainapp">
-    <div>DASH LOADED</div>
+    <router-view></router-view>
   </div>
 </template>
 
@@ -15,7 +15,7 @@ export default class App extends Vue {}
 </script>
 
 <style>
-#dashboardapp {
+#mainapp {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
