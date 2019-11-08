@@ -3,6 +3,7 @@ import App from './App.vue';
 import router from './router';
 import GlobalStorePlugin from './plugins/plugins';
 import singleSpaVue from 'single-spa-vue';
+import vuetify from './plugins/vuetify';
 
 Vue.config.productionTip = false;
 
@@ -12,6 +13,7 @@ const vueLifecycles = singleSpaVue({
     render: (h: any) => h(App),
     router,
     GlobalStorePlugin,
+    vuetify,
     el: '#navbar-app'
   },
 });

@@ -5,18 +5,26 @@
     </div>
     <div class="nav">
       <div class="nav-item">
-        <router-link to="/main">Main application</router-link>
-      </div>
-      <MainAppSubNav v-if="this.$route.path.startsWith('/main')" />
-      <div class="nav-item">
-        <router-link to="/about">About</router-link>
-      </div>
-      <div class="nav-item">
-        <router-link to="/dashboard">Dashboard</router-link>
+        <router-link to="/dashboard"><i class="mdi mdi-gauge-low"></i> Launchpad</router-link>
       </div>
       <DashboardAppSubNav v-if="this.$route.path.startsWith('/dashboard')"></DashboardAppSubNav>
       <div class="nav-item">
-        <router-link to="/agents">Agents</router-link>
+        <router-link to="/main"><i class="mdi mdi-account-multiple-outline"></i> Leads</router-link>
+      </div>
+      <MainAppSubNav v-if="this.$route.path.startsWith('/main')" />
+      <div class="nav-item">
+        <router-link to="/contacts"><i class="mdi mdi-notebook-outline"></i> Contacts</router-link>
+      </div>
+      <ContactsSubNav v-if="this.$route.path.startsWith('/contacts')"></ContactsSubNav>
+      <div class="nav-item">
+        <router-link to="/communications"><i class="mdi mdi-inbox"></i> Communications</router-link>
+      </div>
+      <CommunicationSubNav v-if="this.$route.path.startsWith('/communications')"></CommunicationSubNav>
+      <div class="nav-item">
+        <router-link to="/about">About</router-link>
+      </div>      
+      <div class="nav-item">
+        <router-link to="/agents"><i class="mdi mdi-account-circle-outline"></i> Agents</router-link>
       </div>
       <Agents v-if="this.$route.path.startsWith('/agents')" />
     </div>
@@ -30,12 +38,16 @@ import Vue from 'vue';
 import Agents from './components/agents.vue';
 import MainAppSubNav from './components/mainAppSubNav.vue';
 import DashboardAppSubNav from './components/dashboardAppSubNav.vue';
+import CommunicationSubNav from './components/communicationSubNav.vue';
+import ContactsSubNav from './components/contactsSubNav.vue';
 
 @Component({
   components: {
     Agents,
     MainAppSubNav,
-    DashboardAppSubNav
+    DashboardAppSubNav,
+    CommunicationSubNav,
+    ContactsSubNav,
   },
 })
 export default class App extends Vue {}
@@ -79,7 +91,16 @@ export default class App extends Vue {}
   color: #34A2BC;
 }
 
-.navbar-app .nav-menu .nav-sub-item:before {
+.nav-sub-menu .nav-sub-menu-item:before {
+  content: "";
+}
+
+.nav-sub-menu .nav-sub-menu-item {
+  margin-left: 1em;
+  padding-left: 1em;
+}
+
+.navbar-app .nav-menu .nav-sub-item:before, .nav-sub-menu-item:before {
   content: "\f111";
   display: inline;
   font: normal normal normal 14px/1 FontAwesome;
@@ -96,7 +117,7 @@ export default class App extends Vue {}
   margin-right: -10px;
 }
 
-.navbar-app .nav-sub-item {
+.navbar-app .nav-sub-item, .nav-sub-menu .nav-sub-menu-item {
   padding-top: 0.25em;
   padding-bottom: 0.25em;
   margin-left: 1em;
