@@ -101,9 +101,9 @@ export default class App extends Vue {}
 }
 
 .navbar-app .nav-menu .nav-sub-item:before, .nav-sub-menu-item:before {
-  content: "\f111";
+  content: "\F764";
   display: inline;
-  font: normal normal normal 14px/1 FontAwesome;
+  font: normal normal normal 14px/1 "Material Design Icons";
   font-size: 10px;
   line-height: 21px;
   color: #363e45;
