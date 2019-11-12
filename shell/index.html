@@ -12,11 +12,20 @@
   <script type="systemjs-importmap">
       {
         "imports": {
+          <!--
           "navbar": "http://localhost:8082/js/app.js",            
           "mainApp": "http://localhost:8081/js/app.js",  
           "dashboardApp": "http://localhost:8084/js/app.js",  
           "aboutApp": "http://localhost:8085/js/app.js",  
           "agentsApp": "http://localhost:8090/main.js",
+          -->         
+
+          "navbar": "../navigation/js/app.js",            
+          "mainApp": "../mainApp/js/app.js",  
+          "dashboardApp": "../dashboardApp/js/app.js",  
+          "aboutApp": "../aboutApp/js/app.js",   
+          "agentsApp": "../agentsApp/js/app.js",  
+
           "single-spa": "https://cdnjs.cloudflare.com/ajax/libs/single-spa/4.3.5/system/single-spa.min.js",
           "vue": "https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js",
           "vue-router": "https://cdn.jsdelivr.net/npm/vue-router@3.0.7/dist/vue-router.min.js"
