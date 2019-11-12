@@ -9,6 +9,7 @@
     "build:single-spa": "npm run build ./src/main.single-spa.ts",
     "serve:single-spa": "npm run serve ./src/main.single-spa.ts",
     "start": "npm run serve:single-spa",
+    "serve:individual": "npm run serve ./src/main.ts",
     "test:e2e": "vue-cli-service test:e2e",
     "test:unit": "vue-cli-service test:unit"
   },
